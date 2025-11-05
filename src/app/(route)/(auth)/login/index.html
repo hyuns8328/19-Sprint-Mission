@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../styles/globals.css">
+    <link rel="stylesheet" href="../styles/auth.css">
+    <script type="module" src="../scripts/auth.js" defer></script>
+</head>
+<body>
+    <div class="auth-container">
+        <a class="logo-link" href="../index.html">
+            <img class="logo" src="../images/logo.png" alt="logo and link to home page">
+        </a>
+        <div class="auths">
+            <form class="form-container" action="#" method="get">
+                <div class="input-container">
+                    <label for="email">이메일</label>
+                    <input type="email" id="email" name="email" placeholder="이메일을 입력하세요" required>
+                    <div class="error-message" id="email-error"></div>
+                </div>
+                <div class="input-container">
+                    <label for="password">비밀번호</label>
+                    <div class="password-input-container">
+                        <input type="password" id="password" name="password" placeholder="비밀번호를 입력하세요" required>
+                        <img id="toggle-password" class="icon-button visibility" src="../images/ic_visibility_off.png" alt="비밀번호 표시 아이콘">
+                    </div>
+                    <div class="error-message" id="password-error"></div>
+                </div>
+                <button id="submit-btn" type="submit" class="button submit" disabled>로그인</button>
+            </form>
+            <div class="easy-login">
+                <span>간편 로그인하기</span>
+                <div class="social-icon-container">
+                    <a href="https://www.google.com/" target="_blank">
+                        <img class="google" src="../images/ic_google.png" alt="구글 로그인 아이콘">
+                    </a>
+                    <a href="https://www.kakaocorp.com/" target="_blank">
+                        <img class="kakao" src="../images/ic_kakao.png" alt="카카오 로그인 아이콘">
+                    </a>
+                </div>
+            </div>
+            <div class="auth-toggle">
+                <span>판다마켓이 처음이신가요?</span>
+                <a class="signup-link" href="../signup/">회원가입</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
