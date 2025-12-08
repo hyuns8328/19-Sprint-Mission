@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+/*=== COLORS ===*/
+@theme {
+  --color-purple100: #F8F0FF;
+  --color-red: #F74747;
+  --blue: #3692FF;
+  --light-blue: #CFE5FF;
+  --color-gray900: #111827;
+  --color-gray800: #1f2937;
+  --color-gray700: #374151;
+  --color-gray600: #4B5563;
+  --color-gray500: #6B7280;
+  --color-gray400: #9CA3AF;
+  --color-gray200: #E5E7EB;
+  --color-gray100: #F3F4F6;
+  --color-gray50: #F9FAFB;
+}
+
+@theme inline {
+  --font-bit: 'Bit';
+}
+
+/*=== FONTS === */
+@font-face {
+  font-family: 'Pretendard';
+  src: url('/fonts/PretendardVariable.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@theme {
+  --font-pretendard: Pretendard;
+}
+
+@layer base {
+  body {
+    @apply font-pretendard;
+  }
+}
+
+/* 말줄임표 (2줄) */
+.line-clamp-2 {
+  display: -webkit-box; /* 멀티라인 블록 */
+  -webkit-line-clamp: 2; /* 최대 2줄 */
+  -webkit-box-orient: vertical; /* 박스 방향 설정 */
+  overflow: hidden; /* 넘치는 텍스트 숨김 */
+  text-overflow: ellipsis; /* 말줄임 표시 */
+}
+
+:root {
+    --red: #F74747;
+    --blue: #3692FF;
+    --light-blue: #CFE5FF;
+    --gray900: #111827;
+    --gray800: #1f2937;
+    --gray700: #374151;
+    --gray600: #4B5563;
+    --gray500: #6B7280;
+    --gray400: #9CA3AF;
+    --gray200: #E5E7EB;
+    --gray100: #F3F4F6;
+    --gray50: #F9FAFB;
+}
+/* * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} */
+ 
+/* html, body {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+} */
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--gray100);
+    background-color: var(--blue);
+    cursor: pointer;
+}.button:hover {
+    background-color: #1967D6;
+}
+.icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
